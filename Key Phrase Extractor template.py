@@ -1,11 +1,11 @@
 #Librerie da importare
 import pandas as pd
 import numpy as np
-import pke    #libreria per estrazione parole chiave, si appoggia su spacy e marisa-trie
-import spacy #libreria NLP
+import pke    
+import spacy 
 
 Percorsi_df = pd.read_excel(r'NAME.xlsx')
-print (Percorsi_df)
+print (Percorsi_df.head())
 
 List_Percorsi = Percorsi_df.values.tolist() #Turn df into list
 

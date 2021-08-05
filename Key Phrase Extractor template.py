@@ -20,7 +20,7 @@ for i in range(0, len(List_Percorsi)):
         extractor.load_document(input=List_Percorsi[i][9], language='it')
         extractor.candidate_selection(pos={"NOUN", "PROPN" "ADJ"}) # keyphrase candidate selection, here sequences of nouns and adjectives # defined by the Universal PoS tagset
         extractor.candidate_weighting() # candidate weighting, here using a random walk algorithm 
-        new_column.append(extractor.get_n_best(n=4)) # N-best selection, keyphrases contains the 10 highest scored candidates as # (keyphrase, score) tuples
+        new_column.append(extractor.get_n_best(n=4)) # N-best selection, keyphrases contains the 4 highest scored candidates as # (keyphrase, score) tuples
  
 
 new_column_3 = []

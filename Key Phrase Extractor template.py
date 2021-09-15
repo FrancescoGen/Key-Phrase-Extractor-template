@@ -23,24 +23,24 @@ for i in range(0, len(List_Percorsi)):
         new_column.append(extractor.get_n_best(n=4)) # N-best selection, keyphrases contains the 4 highest scored candidates as # (keyphrase, score) tuples
  
 
-new_column_3 = []
+new_column_1 = []
     
 for i in new_column:
     if 'nan' in i:
-        new_column_3.append(['nan'])
+        new_column_1.append(['nan'])
     else:
-        new_column_3.append([tup[0] for tup in i])
+        new_column_1.append([tup[0] for tup in i])
 
-new_column_4 = []
+new_column_2 = []
 
-for i in new_column_3:
+for i in new_column_1:
     if 'nan' in i:
-        new_column_4.append('nan')
+        new_column_2.append('nan')
     else:
-        new_column_4.append(', '.join(i))
+        new_column_2.append(', '.join(i))
             
             
-Percorsi_df['key_phrases'] = new_column_4
+Percorsi_df['key_phrases'] = new_column_2
 # Create a Pandas Excel writer using XlsxWriter as the engine.
 writer = pd.ExcelWriter('Percorsi_1.xlsx', engine='xlsxwriter')
 
